@@ -17,13 +17,14 @@ export default function SearchableSelectModal({
   multiple = false,
   darkMode = false,
   onSelect = () => {},
+  language = "TR",
 }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedItems, setSelectedItems] = useState([]);
   const [buttonWidth, setButtonWidth] = useState(0);
   const styles = getStyles(darkMode);
-
+  const isTR = language === "TR";
   const filteredData = useMemo(() => {
     return data.filter((item) =>
       item.toLowerCase().includes(searchQuery.toLowerCase())
@@ -47,13 +48,18 @@ export default function SearchableSelectModal({
 
   const renderButtonLabel = () => {
     if (selectedItems.length === 0) {
-      return type ? `${type} seçiniz` : "Seçiniz";
+      return isTR
+        ? type
+          ? `${type} seçiniz`
+          : "Seçiniz"
+        : type
+        ? `Select ${type}`
+        : "Select";
     }
 
     const joined = selectedItems.join(", ");
-    return joined.length > 0 ? joined : "Seçiniz";
+    return joined.length > 0 ? joined : isTR ? "Seçiniz" : "Select";
   };
-
   const closeModal = () => {
     setModalVisible(false);
     setSearchQuery("");
@@ -85,10 +91,16 @@ export default function SearchableSelectModal({
             <TouchableWithoutFeedback>
               <View style={styles.modalContainer}>
                 <Text style={styles.modalTitle}>
-                  {type ? `${type} Seçimi` : "Seçim"} Yap
+                  {isTR
+                    ? type
+                      ? `${type} Seçimi`
+                      : "Seçim"
+                    : type
+                    ? `Select ${type}`
+                    : "Selection"}
                 </Text>
                 <TextInput
-                  placeholder="Ara..."
+                  placeholder={isTR ? "Ara..." : "Search..."}
                   value={searchQuery}
                   onChangeText={setSearchQuery}
                   style={styles.searchInput}
@@ -105,9 +117,13 @@ export default function SearchableSelectModal({
                     }}
                   >
                     <Text style={styles.selectAllMiniText}>
-                      {selectedItems.length === data.length
-                        ? "Temizle"
-                        : "Tümünü Seç"}
+                      {isTR
+                        ? selectedItems.length === data.length
+                          ? "Temizle"
+                          : "Tümünü Seç"
+                        : selectedItems.length === data.length
+                        ? "Clear"
+                        : "Select All"}
                     </Text>
                   </TouchableOpacity>
                 )}
