@@ -28,7 +28,21 @@ Bu bileşen, klasik dropdown çözümlerinin eksikliklerini kapatır. React Nati
 | `onSelect`  | Kullanıcı seçim yaptığında çalışan fonksiyondur. Seçilen veriler bu fonksiyonla dışarı aktarılır. |
 | `language`  | Modal içeriğinin dilini belirler. Örneğin "TR" veya "EN". Sayfa üzerinden dinamik olarak gönderilebilir veya sabit bir değer atanabilir. |
 
+### 🔧 Kullanım Şekli / Usage
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eeab94ea-e033-4806-a186-4556f0ae4357" />
+</p>
+
 Bu bileşen, geliştirme sürecini hızlandırmakla kalmaz, aynı zamanda kullanıcıya estetik ve sezgisel bir deneyim sunar.
+
+### 💫 Örnek Kod Çıktısı / Sample Code Output
+Aşağıda **SearchableSelectScreen()** bileşeninin çıktısı bulunmaktadır.
+
+![seachable-select-screen](https://github.com/user-attachments/assets/7181ece7-da0e-47db-a204-799448cf1193)
+
+Aşağıda **SearchableSelectModal()** bileşeninin çıktısı bulunmaktadır.
+
+![searchable-select-modal-mobile](https://github.com/user-attachments/assets/17715d93-d6c4-433e-8fc2-9aa2203b3578)
 
 ---
 
