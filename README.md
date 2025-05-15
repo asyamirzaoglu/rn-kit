@@ -26,10 +26,14 @@ npx expo start
 ```
 # 📚 Bileşenler / Components
 
-### 🔹 Searchable Select Modal
+### 🔹 [Searchable Select Modal](https://github.com/asyamirzaoglu/rn-kit/tree/master/components/Searchable-Select-Modal)
 
 **🇹🇷 Türkçe:**  
 Bu bileşen, tıklanabilir bir butonla tetiklenen, içerisindeki liste verilerini kullanıcıya gösteren bir seçim modalıdır. Modal içerisinde arama yapılabilir, liste filtrelenebilir. Tekli veya çoklu seçim destekler. Auto-complete ile dropdown birleşimi gibi düşünülebilir.
 
+📄 [Detaylı bilgi için tıklayın](components/Searchable-Select-Modal/Details.md)
+
 **🇬🇧 English:**  
 This component is a selection modal triggered by a clickable button. It displays a list of provided data and allows the user to search and filter through the list. Supports both single and multiple selection. It works like a combination of an autocomplete and dropdown component.
+
+📄 [Click here for detailed info](components/Searchable-Select-Modal/Details.md)
