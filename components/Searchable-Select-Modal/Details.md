@@ -26,6 +26,7 @@ Bu bileşen, klasik dropdown çözümlerinin eksikliklerini kapatır. React Nati
 | `multiple`  | Çoklu seçim yapılmasını sağlar (`true`), tekli seçim yapılmasını sağlar (`false`). |
 | `darkMode`  | Temayı belirler. Koyu mod için `true`, açık mod için `false`. Varsayılan: `false`. |
 | `onSelect`  | Kullanıcı seçim yaptığında çalışan fonksiyondur. Seçilen veriler bu fonksiyonla dışarı aktarılır. |
+| `language`  | Modal içeriğinin dilini belirler. Örneğin "TR" veya "EN". Sayfa üzerinden dinamik olarak gönderilebilir veya sabit bir değer atanabilir. |
 
 Bu bileşen, geliştirme sürecini hızlandırmakla kalmaz, aynı zamanda kullanıcıya estetik ve sezgisel bir deneyim sunar.
 
@@ -57,5 +58,6 @@ This component solves a common problem in mobile development: default dropdowns 
 | `multiple`  | Enables multiple selection if `true`, single selection if `false`. |
 | `darkMode`  | Sets the theme. Use `true` for dark mode, `false` for light mode. Default is `false`. |
 | `onSelect`  | A callback function that returns the selected items. You can log them, filter other views, or use them in any logic. |
+| `language`  | Defines the language of the modal content. For example, "TR" or "EN". It can be passed dynamically or set manually based on app needs. |
 
 This component not only accelerates development but also improves the end-user experience with a clean and intuitive interface.
